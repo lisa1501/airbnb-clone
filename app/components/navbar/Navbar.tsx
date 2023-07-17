@@ -1,4 +1,5 @@
 import Container from '../Container';
+import Logo from './Logo';
 
 export default function Navbar() {
     return (
@@ -17,7 +18,7 @@ export default function Navbar() {
                             md:gap-0
                         '
                     >
-                    Anything
+                    <Logo />
                     </div>
                 </Container>
 
