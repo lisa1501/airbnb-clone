@@ -1,5 +1,4 @@
-import React from 'react'
-import Container from '../Container'
+import Container from '../Container';
 
 export default function Navbar() {
     return (
@@ -8,7 +7,18 @@ export default function Navbar() {
                 className='py-4 border-p-[1px]'
             >
                 <Container>
-                    
+                    <div
+                        className='
+                            flex
+                            flex-row
+                            items-center
+                            justify-between
+                            gap-3
+                            md:gap-0
+                        '
+                    >
+                    Anything
+                    </div>
                 </Container>
 
             </div>
