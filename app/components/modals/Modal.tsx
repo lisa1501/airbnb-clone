@@ -170,9 +170,19 @@ const Modal: React.FC<ModalProps> = ({
                                         w-full
                                     "
                                 >
+                                    {secondaryAction && secondaryActionLabel && (
+                                        <Button
+                                            outline
+                                            disabled={disabled}
+                                            label={secondaryActionLabel}
+                                            onClick={handleSecondaryAction}
+                                        />
+                                    )}
                                     
-                                    <Button 
-                                        label="My button"
+                                    <Button
+                                        disabled={disabled}
+                                        label={actionLabel}
+                                        onClick={onSubmit}
                                     />
                                 </div>
                                 {footer}
