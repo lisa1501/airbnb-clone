@@ -1,6 +1,5 @@
 'use client'
 import axios from 'axios';
-import { AiFillGithub } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';
 import { useCallback, useState } from 'react';
 import {
@@ -9,10 +8,12 @@ import {
     useForm
 } from 'react-hook-form';
 
+
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import Modal from './Modal'
 import Heading from '../Heading';
 import Input from '../inputs/Input';
+import { toast } from 'react-hot-toast';
 
 const RegisterModal = () => {
     const registerModal = useRegisterModal();
@@ -40,7 +41,7 @@ const RegisterModal = () => {
                 registerModal.onClose();
             })
             .catch((error)=>{
-                console.log(error);
+                toast.error('Something went wrong !')
             })
             .finally(()=>{
                 setIsLoading(false);
@@ -81,6 +82,8 @@ const RegisterModal = () => {
             />
         </div>
     )
+
+    
 
     return ( 
         <Modal 
