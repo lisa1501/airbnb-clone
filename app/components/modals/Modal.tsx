@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useCallback } from "react";
 import { IoMdClose } from "react-icons/io";
+import Button from "../Button";
 
 interface ModalProps {
     isOpen?: boolean;
@@ -169,10 +170,14 @@ const Modal: React.FC<ModalProps> = ({
                                         w-full
                                     "
                                 >
-                                    {/* <Button /> */}
+                                    
+                                    <Button 
+                                        label="My button"
+                                    />
                                 </div>
                                 {footer}
                             </div>
+
                         </div>
                     </div>
                 </div>
