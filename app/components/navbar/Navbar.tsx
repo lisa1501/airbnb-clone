@@ -1,10 +1,17 @@
 'use client';
+import { User } from '@prisma/client'
 import Container from '../Container';
 import Logo from './Logo';
 import Search from './Search';
 import UserMenu from './UserMenu';
 
-export default function Navbar() {
+interface NavbarProps {
+    currentUser?: User | null;
+}
+const Navbar: React.FC<NavbarProps>=({
+    currentUser
+})=>{
+    console.log(currentUser)
     return (
         <div className='fixed w-full bg-white z-10 shadow-sm'>
             <div
@@ -23,7 +30,7 @@ export default function Navbar() {
                     >
                         <Logo />
                         <Search />
-                        <UserMenu />
+                        <UserMenu currentUser={currentUser}/>
                     </div>
                 </Container>
 
@@ -31,3 +38,5 @@ export default function Navbar() {
         </div>
     )
 }
+
+export default Navbar;
