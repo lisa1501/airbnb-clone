@@ -3,6 +3,7 @@ import Container from "../Container";
 import { TbBeach, TbMountain, TbPool } from 'react-icons/tb';
 
 import CategoryBox from "../CategoryBox";
+import { useSearchParams, usePathname } from "next/navigation";
 
 export const categories = [
     {
@@ -23,6 +24,15 @@ export const categories = [
 ]
 
 const Categories = () => {
+    const params = useSearchParams();
+    const category = params?.get('category');
+    const pathname = usePathname();
+    const isMainPage = pathname === '/';
+
+    if (!isMainPage) {
+        return null;
+    }
+
     return ( 
         <Container>
             <div
@@ -39,8 +49,8 @@ const Categories = () => {
                     <CategoryBox 
                         key={item.label}
                         label={item.label}
-                        
                         icon={item.icon}
+                        selected={category === item.label}
                     />
                 ))}
             </div>
