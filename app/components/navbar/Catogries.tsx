@@ -35,16 +35,15 @@ const Categories = () => {
                     overflow-x-auto
                 "
             >
-                {categories.map((item) =>{
+                {categories.map((item) =>(
                     <CategoryBox 
                         key={item.label}
                         label={item.label}
-                        description={item.description}
+                        
                         icon={item.icon}
                     />
-                })}
+                ))}
             </div>
-
         </Container>
     );
 }
