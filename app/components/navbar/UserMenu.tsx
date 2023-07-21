@@ -4,12 +4,13 @@ import Avatar from "../Avatar";
 import MenuItem from "./MenuItem";
 import { useCallback, useState } from "react";
 import useRegisterModal from "@/app/hooks/useRegisterModal";
-import useLoginModal from "@/app/hooks/useRentModal";
-import useRentModal from "@/app/hooks/useRentModal";
+import useLoginModal from "@/app/hooks/useLoginModal";
+
 
 import { User } from "@prisma/client"
 import { signOut } from "next-auth/react";
 import { SafeUser } from "@/app/types";
+import useRentModal from "@/app/hooks/useRentModal";
 
 
 interface UserMenuProps {
@@ -21,6 +22,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
     const registerModal = useRegisterModal()
     const loginModal = useLoginModal()
     const rentModal = useRentModal()
+    
     const [isOpen, setIsOpen] = useState(false)
 
     const toggleOpen = useCallback(() =>{

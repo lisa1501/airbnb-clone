@@ -11,7 +11,6 @@ import LoginModal from './components/modals/LoginModal';
 import RentModal from './components/modals/RentModal';
 
 
-
 export const metadata = {
     title: 'Airbnb',
     description: 'Airbnb Clone',

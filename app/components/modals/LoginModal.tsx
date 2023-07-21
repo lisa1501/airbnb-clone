@@ -10,7 +10,7 @@ import {
 } from 'react-hook-form';
 
 import useRegisterModal from '@/app/hooks/useRegisterModal';
-import useLoginModal from '@/app/hooks/useRentModal';
+import useLoginModal from '@/app/hooks/useLoginModal';
 import Modal from './Modal'
 import Heading from '../Heading';
 import Input from '../inputs/Input';
