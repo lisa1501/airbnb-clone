@@ -46,7 +46,7 @@ const RentModal = () => {
     });
     const category = watch('category');
     const location = watch('location');
-    const guestcount = watch('guestcount');
+    const guestCount = watch('guestCount');
 
     const Map = useMemo(() => dynamic(() => import('../Map'), { 
         ssr: false 
@@ -140,8 +140,8 @@ const RentModal = () => {
                 <Counter 
                     title="Number of guests" 
                     subtitle="How many guests"
-                    value={guestcount} 
-                    onChange={()=>{}}
+                    value={guestCount} 
+                    onChange={(value)=>setCustomValue('guestCount', value)}
                 />
             </div>
         )
