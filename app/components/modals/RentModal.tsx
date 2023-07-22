@@ -104,6 +104,16 @@ const RentModal = () => {
             </div>
         </div>
     )
+
+    if(step === STEPS.LOCATION) {
+        bodyContent = (
+            <div className="flex flex-col gap-8">
+                Location Step!
+            </div>
+        )
+    }
+
+    
     return ( 
         <Modal
             isOpen={rentModal.isOpen}
@@ -112,7 +122,7 @@ const RentModal = () => {
             actionLabel={actionLabel}
             secondaryActionLabel={secondaryActionLabel}
             secondaryAction={step === STEPS.CATEGORY ? undefined : onBack}
-            onSubmit={rentModal.onClose}
+            onSubmit={onNext}
             body={bodyContent}
         />
     );
