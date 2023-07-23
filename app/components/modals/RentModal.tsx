@@ -49,6 +49,7 @@ const RentModal = () => {
     const guestCount = watch('guestCount');
     const roomCount = watch('roomCount');
     const bathroomCount = watch('bathroomCount');
+    const imageSrc = watch('imageSrc');
 
     const Map = useMemo(() => dynamic(() => import('../Map'), { 
         ssr: false 
@@ -168,9 +169,12 @@ const RentModal = () => {
             <div className="flex flex-col gap-8">
                 <Heading 
                     title="Add a phot of your place"
-                    subtitle="Show guests what your place tooks like!"
+                    subtitle="Show guests what your place looks like!"
                 />
-                <ImageUpload />
+                <ImageUpload 
+                    value={imageSrc}
+                    onChange={(value)=>setCustomValue('imageSrc',value)}
+                />
             </div>
         )
     }

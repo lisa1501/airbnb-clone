@@ -8,6 +8,7 @@ import { TbPhotoPlus } from 'react-icons/tb'
 declare global {
     var cloudinary: any
 }
+const uploadPresent = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESENT
 
 interface ImageUploadProps {
     onChange: (value: string) => void;
@@ -24,7 +25,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
         return ( 
             <CldUploadWidget 
                 onUpload={handleUpload} 
-                uploadPreset="ns2wopwn"
+                uploadPreset={uploadPresent}
                 options={{
                     maxFiles: 1
                 }}
