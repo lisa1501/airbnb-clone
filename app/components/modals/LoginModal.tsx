@@ -92,6 +92,10 @@ const LoginModal = () => {
 
     const footerContent = (
         <div className="flex flex-col gap-4 mt-3">
+            <div>
+                <li> ✅Email:  test@example.com </li>
+                <li> ✅Password:  password </li>
+            </div>
             <hr />
             <Button 
                 outline 
