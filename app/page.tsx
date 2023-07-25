@@ -5,10 +5,11 @@ import EmptyState from "./components/EmptyState";
 export default function Home() {
     const isEmpty = true;
     if (isEmpty) {
-        <ClientOnly>
-            <EmptyState />
-        </ClientOnly>
-
+        return(
+            <ClientOnly>
+                <EmptyState showReset/>
+            </ClientOnly>
+        )
     }
     return (
         <ClientOnly>
