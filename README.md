@@ -29,7 +29,8 @@ Features:
   
 ### Prerequisites
 
-**Node version 14.x**```shell
+**Node version 14.x**
+```shell
 git clone https://github.com/lisa1501/airbnb-clone.git
 ```
 
