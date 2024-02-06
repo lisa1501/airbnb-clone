@@ -29,7 +29,17 @@ Features:
   
 ### Prerequisites
 
-**Node version 14.x**
+**Node version 14.x**```shell
+git clone https://github.com/lisa1501/airbnb-clone.git
+```
+
+### Install packages
+
+```shell
+npm i
+```
+
+### Setup .env file
 
 - Create a .env file in the current directory. It should contain the following information.
 ```bash
@@ -60,8 +70,28 @@ npm run dev
 # or
 yarn dev
 # or
-pnpm dev
+npm dev
 ```
+### Setup Prisma
+
+```shell
+npx prisma db push
+
+```
+
+### Start the app
+
+```shell
+npm run dev
+```
+
+## Available commands
+
+Running commands with npm `npm run [command]`
+
+| command         | description                              |
+| :-------------- | :--------------------------------------- |
+| `dev`           | Starts a development instance of the app |
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
