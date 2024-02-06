@@ -1,5 +1,7 @@
 [Click here to see it in action!](https://halisa-air-clone-7fy5.vercel.app/)
-Features:
+
+
+### Features
 
 - Tailwind design
 - Tailwind animations and effects
